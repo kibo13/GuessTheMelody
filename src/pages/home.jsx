@@ -26,7 +26,7 @@ export default function Home() {
       <form onSubmit={handleSave}>
         <label htmlFor="">Enter message</label>
         <input type="text" ref={messageRef} />
-        <button type="submit">Save</button>
+        <button type="submit">Send</button>
       </form>
     </div>
   )
