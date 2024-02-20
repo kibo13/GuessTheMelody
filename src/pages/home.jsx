@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { firestore, addDoc, collection } from '../firebase'
+import { firestore, addDoc, collection } from '../config/firebase'
 
 export default function Home() {
   const messageRef = useRef()
