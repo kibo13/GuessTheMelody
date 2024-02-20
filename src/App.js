@@ -1,17 +1,8 @@
-import React, { useState } from "react";
-import Home from "./pages/home";
+import React from "react";
+import Home from "./pages/Home";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <div>
-      <h1>Welcome to page</h1>
-      <Home />
-      <p>Вы нажали {count} раз</p>
-      <button onClick={() => setCount(count + 1)}>Нажми на меня</button>
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;
