@@ -1,0 +1,8 @@
+.home {
+    margin: 0 auto;
+    padding: 10px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: 10px;
+}
