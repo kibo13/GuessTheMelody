@@ -31,18 +31,21 @@ function Home() {
         songs: songs.filter((song) => song.categoryId === category.id),
     }));
 
-    console.log(songsByCategory);
-
     return (
         <div className='home'>
             <div className='song-list-wrapper'>
                 {songsByCategory.map((category) => (
                     <div key={category.id} className='song-list-row'>
-                        <div className='song-list-cell'>{category.name}</div>
+                        <div className='song-list-cell' style={{ backgroundColor: `${category.color}` }}>
+                            {category.name}
+                        </div>
                         {category.songs.map((song) => (
-                            <div key={song.id} className='song-list-cell'>
-                                <a className='song-list-link' href={song.url}>
-                                    10
+                            <div
+                                key={song.id}
+                                className='song-list-cell'
+                                style={{ backgroundColor: `${category.color}` }}>
+                                <a className='song-list-link' href={song.url} target='_blank'>
+                                    <img className='song-list-icon' src='melody.svg' />
                                 </a>
                             </div>
                         ))}

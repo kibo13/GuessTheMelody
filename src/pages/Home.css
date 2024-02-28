@@ -20,13 +20,16 @@
 }
 
 .song-list-cell {
-    /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-radius: 4px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    font-weight: bold;
+    border-radius: 1.25rem;
+    color: #000;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    transition: all 0.3s ease;
 }
 
 .song-list-link {
@@ -36,7 +39,14 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    font-size: 52px;
     color: #000;
-    border: 1px dashed red;
+}
+
+.song-list-cell:hover {
+    transform: translateY(-3px);
+}
+
+.song-list-icon {
+    width: 70%;
+    height: 70%;
 }
