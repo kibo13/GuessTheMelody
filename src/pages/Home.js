@@ -45,7 +45,7 @@ function Home() {
                                 className='song-list-cell'
                                 style={{ backgroundColor: `${category.color}` }}>
                                 <a className='song-list-link' href={song.url} target='_blank'>
-                                    <img className='song-list-icon' src='melody.svg' />
+                                    <img className='song-list-icon' src='melody.svg' alt='icon' />
                                 </a>
                             </div>
                         ))}
