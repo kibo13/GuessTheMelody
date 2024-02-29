@@ -1,0 +1,39 @@
+.player-card {
+    width: 100%;
+    background-color: #f1f4f9;
+    border-radius: 1.25rem;
+    padding: 1rem;
+}
+
+img {
+    width: 20rem;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+input[type='range'] {
+    width: 100%;
+    height: 5px;
+    accent-color: #436ee6;
+    outline: none;
+}
+
+.track-duration {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.track-duration > p {
+    margin: 0;
+    font-size: 10px;
+    font-weight: 500;
+    color: #18181f;
+}
+
+.track-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
