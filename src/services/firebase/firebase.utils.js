@@ -1,4 +1,15 @@
-import { firestore, collection, addDoc, getDocs, storage, ref, uploadBytes, getDownloadURL } from './firebase.config';
+import {
+    firestore,
+    collection,
+    addDoc,
+    doc,
+    getDocs,
+    storage,
+    ref,
+    uploadBytes,
+    getDownloadURL,
+    updateDoc,
+} from './firebase.config';
 
 export async function fetchData(collectioName) {
     let loading = true;
@@ -44,6 +55,16 @@ export async function addData(collectioName, data) {
         return await addDoc(collection(firestore, collectioName), data);
     } catch (error) {
         console.error('Error adding data to Firestore: ' + error);
+        throw error;
+    }
+}
+
+export async function updateData(collectioName, id, data) {
+    try {
+        const record = doc(collection(firestore, collectioName), id);
+        return await updateDoc(record, data);
+    } catch (error) {
+        console.error('Error updating data to Firestore: ' + error);
         throw error;
     }
 }
