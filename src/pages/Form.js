@@ -24,26 +24,22 @@ function Form() {
         event.preventDefault();
 
         if (selectedFile && selectedCategory) {
-            try {
-                setUploading(true);
+            setUploading(true);
 
-                const fileName = selectedFile.name + v4();
-                const fileRef = await uploadFile('songs', fileName, selectedFile);
-                const fileUrl = await getFileUrl(fileRef);
+            const fileName = selectedFile.name + v4();
+            const fileRef = await uploadFile('songs', fileName, selectedFile);
+            const fileUrl = await getFileUrl(fileRef);
 
-                await addData('songs', {
-                    id: v4(),
-                    categoryId: selectedCategory,
-                    name: selectedFile.name,
-                    url: fileUrl,
-                });
+            await addData('songs', {
+                categoryId: selectedCategory,
+                name: selectedFile.name,
+                url: fileUrl,
+                isActive: true,
+            });
 
-                setUploading(false);
-                alert('File uploaded successfully');
-            } catch (error) {
-                console.error('Error uploading file: ' + error);
-                setUploading(false);
-            }
+            setUploading(false);
+
+            alert('File uploaded successfully');
         } else {
             alert('Please select a file and a category');
         }
