@@ -65,23 +65,33 @@ function AudioPlayer({ audioSrc }) {
             tabIndex='-1'
             aria-labelledby='audioPlayerLabel'
             aria-hidden='true'>
-            <div className='modal-dialog modal-dialog-centered'>
+            <div className='modal-dialog modal-dialog-centered modal-sm'>
                 <div className='modal-content'>
                     <div className='player-card'>
-                        <img src='/cover-image.jpg' alt='Cover Image' />
+                        <img className='player-cover' src='assets/images/cover.webp' alt='Cover Image' />
 
-                        <input type='range' min={0} max={duration} value={currentTime} onChange={handleSeek} />
+                        <input
+                            className='player-input-range'
+                            type='range'
+                            min={0}
+                            max={duration}
+                            value={currentTime}
+                            onChange={handleSeek}
+                        />
 
                         <audio ref={audioRef} src={audioSrc} />
 
-                        <div className='track-duration'>
+                        <div className='player-duration'>
                             <p>{formatDuration(currentTime)}</p>
                             <p>{formatDuration(duration)}</p>
                         </div>
 
-                        <div className='track-control'>
-                            <button className='btn btn-primary' onClick={handlePlayerPause}>
-                                {isPlaying ? 'Стоп' : 'Играть'}
+                        <div className='player-control'>
+                            <button className='player-button' onClick={handlePlayerPause}>
+                                <img
+                                    src={isPlaying ? 'assets/icons/pause.svg' : 'assets/icons/play.svg'}
+                                    alt='Control Icon'
+                                />
                             </button>
                         </div>
                     </div>

@@ -5,35 +5,50 @@
     padding: 1rem;
 }
 
-img {
-    width: 20rem;
-    height: auto;
+.player-cover {
+    margin-bottom: 5px;
+    width: 100%;
+    height: 170px;
     border-radius: 0.5rem;
+    object-fit: cover;
 }
 
-input[type='range'] {
+.player-input-range {
     width: 100%;
     height: 5px;
     accent-color: #436ee6;
     outline: none;
 }
 
-.track-duration {
+.player-duration {
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.track-duration > p {
+.player-duration > p {
     margin: 0;
     font-size: 10px;
     font-weight: 500;
     color: #18181f;
 }
 
-.track-control {
+.player-control {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.player-button {
+    margin: 0 auto;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #436ee6;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
 }
