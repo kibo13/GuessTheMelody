@@ -1,22 +1,86 @@
 .home {
+    position: relative;
     margin: 0 auto;
-    padding: 10px;
+    padding: 2rem;
     height: 100vh;
     display: grid;
-    grid-template-columns: 7fr 5fr;
+    grid-template-rows: auto 1fr;
+    gap: 2.5rem;
+}
+
+.team-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
 }
 
-.song-list-wrapper {
-    display: grid;
-    grid-template-rows: repeat(5, 1fr);
+.team-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
     gap: 10px;
+    text-align: center;
+}
+
+.team-badge {
+    position: absolute;
+    top: -0.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem !important;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    user-select: none;
+}
+
+.team-name {
+    margin: 0;
+    padding: 0.5rem 1.5rem;
+    font-size: 3rem;
+    font-weight: bold;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    outline: none;
+}
+
+.team-group {
+    display: flex;
+}
+
+.team-group-even {
+    justify-content: flex-start;
+}
+
+.team-group-odd {
+    justify-content: flex-end;
+}
+
+.team-rate {
+    width: 50%;
+    text-align: center;
+    font-size: 2rem !important;
+    font-weight: bold;
+    color: #3b82f6;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    outline: #dee2e6;
+}
+
+.song-list-wrapper {
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: repeat(3, 180px);
+    gap: 20px;
+    max-width: 1140px;
 }
 
 .song-list-row {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
 }
 
 .song-list-cell {
@@ -24,8 +88,9 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: 1.5rem;
     font-weight: bold;
-    border-radius: 1.25rem;
+    border-radius: 1.5rem;
     color: #000;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
         rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -38,12 +103,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
-    color: #000;
+    background-color: transparent;
+    border: none;
 }
 
-.song-list-cell:hover {
-    transform: translateY(-3px);
+.song-list-animation:hover {
+    transform: translateY(-5px);
 }
 
 .song-list-icon {
