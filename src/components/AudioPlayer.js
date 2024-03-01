@@ -68,7 +68,7 @@ function AudioPlayer({ audioSrc }) {
             <div className='modal-dialog modal-dialog-centered modal-sm'>
                 <div className='modal-content'>
                     <div className='player-card'>
-                        <img className='player-cover' src='assets/images/cover.webp' alt='Cover Image' />
+                        <img className='player-cover' src='assets/images/cover.webp' alt='Обложка альбома' />
 
                         <input
                             className='player-input-range'
