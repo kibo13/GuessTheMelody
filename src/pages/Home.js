@@ -122,7 +122,11 @@ function Home() {
                                         data-bs-toggle='modal'
                                         data-bs-target='#audioPlayerModal'
                                         onClick={() => handleSongClick(song)}>
-                                        <img className='song-list-icon' src='assets/icons/melody.svg' alt='icon' />
+                                        <img
+                                            className='song-list-icon'
+                                            src={song.isActive ? 'assets/icons/melody.svg' : 'assets/icons/stop.svg'}
+                                            alt='icon'
+                                        />
                                     </button>
                                 </div>
                             ))}
